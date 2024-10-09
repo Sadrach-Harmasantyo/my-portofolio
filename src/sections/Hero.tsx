@@ -9,7 +9,7 @@ import HeroOrbit from "@/components/HeroOrbit";
 
 export default function Hero() {
   return (
-    <div className="py-32 md:py-48 lg:py-60 relative z-0 overflow-x-clip">
+    <section id="home" className="py-32 md:py-48 lg:py-60 relative overflow-hidden">
       <div className="absolute inset-0 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)]">
         <div className="absolute inset-0 -z-30 opacity-5" style={{ backgroundImage: `url(${grainImage.src})` }}></div>
         <div className="size-[620px] hero-ring"></div>
@@ -47,7 +47,7 @@ export default function Hero() {
           <StarIcon className="size-28 text-emerald-300" />
         </HeroOrbit>
       </div>
-      <div className="container">
+      <div className="container relative z-10">
         <div className="flex flex-col items-center">
           <Image src={memojiImage} className="size-[100px]" alt="Person peeking behind laptop" />
           <div className="bg-gray-950 border border-gray-800 px-4 py-1.5 inline-flex items-center gap-4 rounded-lg">
@@ -65,16 +65,26 @@ export default function Hero() {
           </p>
         </div>
         <div className="flex flex-col md:flex-row justify-center items-center mt-8 gap-4">
-          <button className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl">
-            <span className="font-semibold">Explore My Work</span>
-            <ArrowDown className="size-4" />
-          </button>
-          <button className="inline-flex items-center gap-2 border border-white bg-white text-gray-900 h-12 px-6 rounded-xl">
+          <a href="#projects" className="group relative inline-flex items-center justify-center overflow-hidden border border-white/15 px-6 h-12 rounded-xl bg-gray-900 text-white transition duration-300 ease-out">
+            <span className="ease absolute inset-0 flex h-full w-full -translate-x-full items-center justify-center bg-white text-gray-900 duration-300 group-hover:translate-x-0">
+              <ArrowDown className="size-6 animate-bounce" />
+            </span>
+            <span className="ease absolute flex h-full w-full transform items-center justify-center gap-2 text-white transition-all duration-300 group-hover:translate-x-full">
+              <span className="font-semibold">Explore My Work</span>
+              <ArrowDown className="size-4" />
+            </span>
+            <span className="invisible relative flex items-center gap-2">
+              <span className="font-semibold">Explore My Work</span>
+              <ArrowDown className="size-4" />
+            </span>
+          </a>
+
+          <a href="#contact" className="inline-flex items-center gap-2 border border-white bg-white text-gray-900 h-12 px-6 rounded-xl hover:bg-gray-100 transition-colors">
             <span>👋</span>
             <span className="font-semibold">Let&apos;s Connect</span>
-          </button>
+          </a>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

@@ -43,7 +43,7 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <div className="py-16 lg:py-24">
+    <section className="py-16 lg:py-24">
       <div className="container">
         <SectionHeader eyebrow="Happy Clients" title="What Clients Say About Me" description="Don't just take our word for it. See what our clients have to say." />
         <div className="mt-12 lg:mt-20 flex overflow-x-clip [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)] py-4 -my-4">
@@ -69,6 +69,6 @@ export default function Testimonials() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
