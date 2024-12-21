@@ -6,22 +6,24 @@ import bookImage from "@/assets/images/book-cover.png";
 import React, { useRef } from "react";
 import Image from "next/image";
 import JavascriptIcon from "@/assets/icons/square-js.svg";
+import TypescriptIcon from "@/assets/icons/typescript-svgrepo-com.svg";
 import GithubIcon from "@/assets/icons/github.svg";
 import Html5Icon from "@/assets/icons/html5.svg";
 import Css3Icon from "@/assets/icons/css3.svg";
 import ReactIcon from "@/assets/icons/react.svg";
-import ChromeIcon from "@/assets/icons/chrome.svg";
-import mapImage from "@/assets/images/map.png";
+import TailwindIcon from "@/assets/icons/tailwind.svg";
+// import ChromeIcon from "@/assets/icons/chrome.svg";
+import NextIcon from "@/assets/icons/nextjs.svg";
+// import mapImage from "@/assets/images/map.png";
+import mapMalangImage from "@/assets/images/map-malang.png";
 import smileMemoji from "@/assets/images/memoji-smile.png";
+// import sadrachMemoji from "@/assets/images/memoji-sadrach2.png";
 import CardHeader from "@/components/CardHeader";
 import ToolBoxItems from "@/components/ToolBoxItems";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const toolboxItems = [
-  {
-    title: "JavaScript",
-    iconType: JavascriptIcon,
-  },
   {
     title: "HTML5",
     iconType: Html5Icon,
@@ -31,12 +33,24 @@ const toolboxItems = [
     iconType: Css3Icon,
   },
   {
-    title: "React",
+    title: "TailwindCSS",
+    iconType: TailwindIcon,
+  },
+  {
+    title: "JavaScript",
+    iconType: JavascriptIcon,
+  },
+  {
+    title: "TypeScript",
+    iconType: TypescriptIcon,
+  },
+  {
+    title: "React.js",
     iconType: ReactIcon,
   },
   {
-    title: "Chrome",
-    iconType: ChromeIcon,
+    title: "Next.js",
+    iconType: NextIcon,
   },
   {
     title: "Github",
@@ -46,47 +60,107 @@ const toolboxItems = [
 
 const hobbies = [
   {
-    title: "Hiking",
-    emoji: "🏔️",
-    left: "5%",
-    top: "5%",
-  },
-  {
-    title: "Photography",
-    emoji: "📸",
-    left: "50%",
-    top: "5%",
-  },
-  {
-    title: "Music",
-    emoji: "🎧",
-    left: "35%",
-    top: "40%",
-  },
-  {
     title: "Gaming",
     emoji: "🎮",
     left: "10%",
-    top: "35%",
+    top: "20%",
   },
   {
     title: "Fitness",
     emoji: "🏋️‍♀️",
     left: "70%",
-    top: "45%",
+    top: "30%",
   },
   {
-    title: "Painting",
-    emoji: "🎨",
-    left: "5%",
-    top: "65%",
+    title: "",
+    emoji: "",
+    left: "20%",
+    top: "10%",
   },
   {
-    title: "Cooking",
-    emoji: "🍳",
-    left: "45%",
+    title: "",
+    emoji: "",
+    left: "50%",
+    top: "10%",
+  },
+  {
+    title: "",
+    emoji: "",
+    left: "35%",
+    top: "50%",
+  },
+  {
+    title: "",
+    emoji: "",
+    left: "10%",
     top: "70%",
   },
+  {
+    title: "",
+    emoji: "",
+    left: "45%",
+    top: "80%",
+  },
+  {
+    title: "",
+    emoji: "",
+    left: "25%",
+    top: "90%",
+  },
+  {
+    title: "",
+    emoji: "",
+    left: "60%",
+    top: "70%",
+  },
+  {
+    title: "",
+    emoji: "",
+    left: "80%",
+    top: "20%",
+  },
+  // {
+  //   title: "Gaming",
+  //   emoji: "🎮",
+  //   left: "10%",
+  //   top: "35%",
+  // },
+  // {
+  //   title: "Fitness",
+  //   emoji: "🏋️‍♀️",
+  //   left: "70%",
+  //   top: "45%",
+  // },
+  // {
+  //   title: "Hiking",
+  //   emoji: "🏔️",
+  //   left: "5%",
+  //   top: "5%",
+  // },
+  // {
+  //   title: "Photography",
+  //   emoji: "📸",
+  //   left: "50%",
+  //   top: "5%",
+  // },
+  // {
+  //   title: "Music",
+  //   emoji: "🎧",
+  //   left: "35%",
+  //   top: "40%",
+  // },
+  // {
+  //   title: "Painting",
+  //   emoji: "🎨",
+  //   left: "5%",
+  //   top: "65%",
+  // },
+  // {
+  //   title: "Cooking",
+  //   emoji: "🍳",
+  //   left: "45%",
+  //   top: "70%",
+  // },
 ];
 
 export default function About() {
@@ -132,12 +206,15 @@ export default function About() {
             </Card>
 
             <Card className="h-[320px] p-0 relative md:col-span-2 lg:col-span-1">
-              <Image src={mapImage} alt="Map" className="w-full h-full object-cover object-left-top" />
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-20 rounded-full after:content-[''] after:absolute after:inset-0 after:outline after:outline-2 after:-outline-offset-2 after:rounded-full after:outline-gray-950/30">
-                <div className="absolute inset-0 rounded-full  bg-gradient-to-r from-emerald-300 to-sky-400 -z-20 animate-ping [animation-duration:2s]"></div>
-                <div className="absolute inset-0 rounded-full  bg-gradient-to-r from-emerald-300 to-sky-400 -z-10"></div>
-                <Image src={smileMemoji} alt="Smile Memoji" className="size-20" />
-              </div>
+              <Link href={"https://maps.app.goo.gl/3k5bwPwpPpsgz6Zu6"} target="_blank" className="absolute w-full h-full">
+                <Image src={mapMalangImage} alt="Map" className="w-full h-full object-cover object-center" />
+                {/* <h1 className="absolute left-1/2 -translate-x-1/2 top-5 text-3xl text-slate-50 text-center font-serif">Malang City</h1> */}
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-20 rounded-full after:content-[''] after:absolute after:inset-0 after:outline after:outline-2 after:-outline-offset-2 after:rounded-full after:outline-gray-950/30">
+                  <div className="absolute inset-0 rounded-full  bg-gradient-to-r from-emerald-300 to-sky-400 -z-20 animate-ping [animation-duration:2s]"></div>
+                  <div className="absolute inset-0 rounded-full  bg-gradient-to-r from-emerald-300 to-sky-400 -z-10"></div>
+                  <Image src={smileMemoji} alt="Smile Memoji" className="size-20" />
+                </div>
+              </Link>
             </Card>
           </div>
         </div>

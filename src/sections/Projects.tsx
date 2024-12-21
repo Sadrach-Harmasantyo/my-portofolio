@@ -1,38 +1,103 @@
 import React from "react";
-import darkSaasLandingPage from "@/assets/images/dark-saas-landing-page.png";
-import lightSaasLandingPage from "@/assets/images/light-saas-landing-page.png";
-import aiStartupLandingPage from "@/assets/images/ai-startup-landing-page.png";
+// import darkSaasLandingPage from "@/assets/images/dark-saas-landing-page.png";
+// import lightSaasLandingPage from "@/assets/images/light-saas-landing-page.png";
+// import aiStartupLandingPage from "@/assets/images/ai-startup-landing-page.png";
+import kbmdsiProfileWebsite from "@/assets/images/kbmdsi-website.png";
+import porosProfileWebsite from "@/assets/images/poros-website.png";
+import notesWebsite from "@/assets/images/notes-website.png";
+import pokemonWebsite from "@/assets/images/pokemon-website.png";
+import gymWebsite from "@/assets/images/gym-website.png";
 import CheckCircleIcon from "@/assets/icons/check-circle.svg";
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
 import Image from "next/image";
 import SectionHeader from "@/components/SectionHeader";
 import Card from "@/components/Card";
+import Link from "next/link";
 
 const portfolioProjects = [
   {
-    company: "Acme Corp",
-    year: "2022",
-    title: "Dark Saas Landing Page",
-    results: [{ title: "Enhanced user experience by 40%" }, { title: "Improved site speed by 50%" }, { title: "Increased mobile traffic by 35%" }],
-    link: "https://youtu.be/4k7IdSLxh6w",
-    image: darkSaasLandingPage,
+    company: "KBMDSI FILKOM UB",
+    year: "2024",
+    title: "KBMDSI FILKOM UB Profile Website",
+    results: [
+      { title: "Developed a dynamic and visually appealing website using ReactJS, JavaScript, TailwindCSS, and Framer Motion." },
+      { title: "Designed and implemented user-friendly interfaces to enhance usability and accessibility." },
+      { title: "Collaborated with team members to align the website with the organization’s goals and vision." },
+    ],
+    link: "https://kbmdsi.ub.ac.id/",
+    image: kbmdsiProfileWebsite,
   },
   {
-    company: "Innovative Co",
-    year: "2021",
-    title: "Light Saas Landing Page",
-    results: [{ title: "Boosted sales by 20%" }, { title: "Expanded customer reach by 35%" }, { title: "Increased brand awareness by 15%" }],
-    link: "https://youtu.be/7hi5zwO75yc",
-    image: lightSaasLandingPage,
+    company: "POROS FILKOM UB",
+    year: "2024",
+    title: "POROS FILKOM UB Profile Website",
+    results: [
+      { title: "Built a modern and scalable website using Next.js, TypeScript, and TailwindCSS." },
+      { title: "Enhanced the organization’s web interface for improved user experience." },
+      { title: "Ensured a seamless user experience through collaboration with team members and adherence to organizational objectives." },
+    ],
+    link: "https://poros-web-home-3-0.vercel.app/",
+    image: porosProfileWebsite,
   },
   {
-    company: "Quantum Dynamics",
-    year: "2023",
-    title: "AI Startup Landing Page",
-    results: [{ title: "Enhanced user experience by 40%" }, { title: "Improved site speed by 50%" }, { title: "Increased mobile traffic by 35%" }],
-    link: "https://youtu.be/Z7I5uSRHMHg",
-    image: aiStartupLandingPage,
+    company: "Individual Project",
+    year: "2024",
+    title: "Pokemon Website",
+    results: [
+      { title: "Built a dynamic and interactive Pokémon website using React Vite, JavaScript, Redux and PokeAPI V2." },
+      { title: "Implemented efficient search functionality and seamless pagination for browsing Pokémon data." },
+      { title: "Enhanced user experience with skeleton loaders during data fetching." },
+    ],
+    link: "https://pokeapiv2app.netlify.app/",
+    image: pokemonWebsite,
   },
+  {
+    company: "Individual Project",
+    year: "2024",
+    title: "Gym Exercise Website",
+    results: [
+      { title: "Utilized ReactJS for interactivity, MaterialUI for responsive design, and RapidAPI for real-time exercise data integration." },
+      { title: "Implemented search functionality and displayed tailored exercise recommendations based on muscle groups." },
+    ],
+    link: "https://gymxcercise.netlify.app/",
+    image: gymWebsite,
+  },
+  {
+    company: "Individual Project",
+    year: "2024",
+    title: "Static Notes Website",
+    results: [
+      { title: "Built using React, Vite, and TypeScript for a modern web development approach." },
+      { title: "Implemented features to add, read, delete, and archive notes for efficient note management." },
+      { title: 'Developed a static Notes Website as the final project for Dicoding\'s "Belajar Membuat Aplikasi Web dengan React" course.' },
+    ],
+    link: "https://notes-react-roan.vercel.app/",
+    image: notesWebsite,
+  },
+  // {
+  //   company: "Acme Corp",
+  //   year: "2022",
+  //   title: "Dark Saas Landing Page",
+  //   results: [{ title: "Enhanced user experience by 40%" }, { title: "Improved site speed by 50%" }, { title: "Increased mobile traffic by 35%" }],
+  //   link: "https://youtu.be/4k7IdSLxh6w",
+  //   image: darkSaasLandingPage,
+  // },
+  // {
+  //   company: "Innovative Co",
+  //   year: "2021",
+  //   title: "Light Saas Landing Page",
+  //   results: [{ title: "Boosted sales by 20%" }, { title: "Expanded customer reach by 35%" }, { title: "Increased brand awareness by 15%" }],
+  //   link: "https://youtu.be/7hi5zwO75yc",
+  //   image: lightSaasLandingPage,
+  // },
+  // {
+  //   company: "Quantum Dynamics",
+  //   year: "2023",
+  //   title: "AI Startup Landing Page",
+  //   results: [{ title: "Enhanced user experience by 40%" }, { title: "Improved site speed by 50%" }, { title: "Increased mobile traffic by 35%" }],
+  //   link: "https://youtu.be/Z7I5uSRHMHg",
+  //   image: aiStartupLandingPage,
+  // },
 ];
 
 export default function Projects() {
@@ -56,12 +121,12 @@ export default function Projects() {
                   <ul className="flex flex-col gap-4 mt-4 md:mt-5">
                     {project.results.map((result, index) => (
                       <li key={index} className="flex gap-2 text-sm md:text-base text-white/50">
-                        <CheckCircleIcon className="size-5 md:size-6" />
+                        <CheckCircleIcon className="size-5 md:size-6 flex-shrink-0" />
                         <span>{result.title}</span>
                       </li>
                     ))}
                   </ul>
-                  <a href={project.link}>
+                  <a href={project.link} target="_blank">
                     <button className="bg-white text-gray-950 h-12 w-full md:w-auto px-6 rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8">
                       <span>View Project</span>
                       <ArrowUpRightIcon className="size-4" />
@@ -69,7 +134,9 @@ export default function Projects() {
                   </a>
                 </div>
                 <div className="relative">
-                  <Image src={project.image} alt={project.title} className="mt-8 -mb-4 md:-mb-0 lg:mt-0 lg:absolute lg:h-full lg:w-auto lg:max-w-none" />
+                  <Link href={project.link} target="_blank" className="absolute top-0 left-0 w-full h-full">
+                    <Image src={project.image} alt={project.title} className="mt-8 -mb-4 md:-mb-0 lg:mt-0 lg:absolute lg:h-full lg:w-auto lg:max-w-none rounded-t-xl" />
+                  </Link>
                 </div>
               </div>
             </Card>

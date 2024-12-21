@@ -1,7 +1,8 @@
 import Image from "next/image";
 import React from "react";
 import memojiImage from "@/assets/images/memoji-computer.png";
-import ArrowDown from "@/assets/icons/arrow-down.svg";
+// import ArrowDown from "@/assets/icons/arrow-down.svg";
+import DownloadIcon from "@/assets/icons/download.svg";
 import grainImage from "@/assets/images/grain.jpg";
 import StarIcon from "@/assets/icons/star.svg";
 import SparkleIcon from "@/assets/icons/sparkle.svg";
@@ -60,12 +61,11 @@ export default function Hero() {
         <div className="max-w-lg mx-auto">
           <h1 className="font-serif text-3xl md:text-5xl text-center mt-8 tracking-wide">Building Exceptional User Experiences</h1>
           <p className="mt-4 text-center text-white/60 md:text-lg">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. At quibusdam impedit laborum tenetur molestias provident dolor cum dolore, qui dolores voluptatibus, voluptatem nihil ipsum sequi doloribus velit pariatur vero
-            repellendus?
+            Transforming brilliant ideas into extraordinary digital experiences. We focus on the details, prioritize user comfort, and deliver creative solutions that inspire. Let’s create something amazing together!
           </p>
         </div>
         <div className="flex flex-col md:flex-row justify-center items-center mt-8 gap-4">
-          <a href="#projects" className="group relative inline-flex items-center justify-center overflow-hidden border border-white/15 px-6 h-12 rounded-xl bg-gray-900 text-white transition duration-300 ease-out">
+          {/* <a href="#projects" className="group relative inline-flex items-center justify-center overflow-hidden border border-white/15 px-6 h-12 rounded-xl bg-gray-900 text-white transition duration-300 ease-out">
             <span className="ease absolute inset-0 flex h-full w-full -translate-x-full items-center justify-center bg-white text-gray-900 duration-300 group-hover:translate-x-0">
               <ArrowDown className="size-6 animate-bounce" />
             </span>
@@ -73,16 +73,27 @@ export default function Hero() {
               <span className="font-semibold">Explore My Work</span>
               <ArrowDown className="size-4" />
             </span>
+            <span className="ease absolute flex h-full w-full transform items-center justify-center gap-2 text-white">
+              <span className="font-semibold">Explore My Work</span>
+              <ArrowDown className="size-4" />
+            </span>
             <span className="invisible relative flex items-center gap-2">
               <span className="font-semibold">Explore My Work</span>
               <ArrowDown className="size-4" />
             </span>
+          </a> */}
+
+          <a href="/MyCV.pdf" download="MyCV.pdf" className="group relative inline-flex items-center justify-center overflow-hidden border border-white/15 px-6 h-12 rounded-xl bg-gray-900 text-white transition duration-300 ease-out">
+            <span className="flex items-center justify-center gap-4">
+              <span className="font-semibold">Explore My CV</span>
+              <DownloadIcon className="size-6" />
+            </span>
           </a>
 
-          <a href="#contact" className="inline-flex items-center gap-2 border border-white bg-white text-gray-900 h-12 px-6 rounded-xl hover:bg-gray-100 transition-colors">
+          {/* <a href="#contact" className="inline-flex items-center gap-2 border border-white bg-white text-gray-900 h-12 px-6 rounded-xl hover:bg-gray-100 transition-colors">
             <span>👋</span>
             <span className="font-semibold">Let&apos;s Connect</span>
-          </a>
+          </a> */}
         </div>
       </div>
     </section>
