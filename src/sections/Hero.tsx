@@ -128,9 +128,9 @@ export default function Hero() {
             Hi, I&apos;m Sadrach Harmasantyo
           </h1>
           <p className="mt-4 text-center text-white/60 md:text-lg">
-            I&apos;m a Frontend Engineer specializing in building exceptional
-            user experiences. I love turning ideas into digital realities with
-            clean code and pixel-perfect designs.
+            I started as a Frontend Engineer, crafting seamless user
+            experiences. Now, as a Fullstack Developer, I bring ideas to life
+            end-to-end with clean code and scalable solutions.
           </p>
         </div>
         <div className="flex flex-col md:flex-row justify-center items-center mt-8 gap-4">

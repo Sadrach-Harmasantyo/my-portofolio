@@ -2,7 +2,11 @@ import React, { ComponentPropsWithoutRef } from "react";
 import grainImage from "@/assets/images/grain.jpg";
 import { twMerge } from "tailwind-merge";
 
-export default function Card({ className, children, ...props }: ComponentPropsWithoutRef<"div">) {
+export default function Card({
+  className,
+  children,
+  ...props
+}: ComponentPropsWithoutRef<"div">) {
   return (
     <div
       className={twMerge(

@@ -17,9 +17,15 @@ export default function Home() {
   );
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [lastTrailTime, setLastTrailTime] = useState<number>(0);
+  const [isMouseMoved, setIsMouseMoved] = useState(false);
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
+      // Set state untuk mendeteksi pergerakan pertama mouse
+      if (!isMouseMoved) {
+        setIsMouseMoved(true);
+      }
+
       // Update posisi lingkaran yang selalu mengikuti mouse
       setMousePosition({ x: e.clientX, y: e.clientY });
 
@@ -43,19 +49,21 @@ export default function Home() {
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
     };
-  }, [lastTrailTime]);
+  }, [lastTrailTime, isMouseMoved]);
 
   return (
     <div className="relative">
-      {/* Lingkaran yang selalu mengikuti mouse */}
-      <div
-        className="fixed pointer-events-none z-50 w-4 h-4 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-full opacity-75"
-        style={{
-          transform: `translate(${mousePosition.x - 8}px, ${
-            mousePosition.y - 8
-          }px)`,
-        }}
-      />
+      {/* Lingkaran yang mengikuti mouse hanya jika sudah bergerak */}
+      {isMouseMoved && (
+        <div
+          className="fixed pointer-events-none z-50 w-4 h-4 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-full opacity-75"
+          style={{
+            transform: `translate(${mousePosition.x - 8}px, ${
+              mousePosition.y - 8
+            }px)`,
+          }}
+        />
+      )}
 
       {/* Jejak mouse */}
       {trail.map((t) => (

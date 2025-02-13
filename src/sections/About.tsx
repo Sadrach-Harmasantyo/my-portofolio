@@ -12,6 +12,8 @@ import Html5Icon from "@/assets/icons/html5.svg";
 import Css3Icon from "@/assets/icons/css3.svg";
 import ReactIcon from "@/assets/icons/react.svg";
 import TailwindIcon from "@/assets/icons/tailwind.svg";
+import PhpIcon from "@/assets/icons/php.svg";
+import LaravelIcon from "@/assets/icons/laravel.svg";
 // import ChromeIcon from "@/assets/icons/chrome.svg";
 import NextIcon from "@/assets/icons/nextjs.svg";
 // import mapImage from "@/assets/images/map.png";
@@ -45,12 +47,20 @@ const toolboxItems = [
     iconType: TypescriptIcon,
   },
   {
+    title: "PHP",
+    iconType: PhpIcon,
+  },
+  {
     title: "React.js",
     iconType: ReactIcon,
   },
   {
     title: "Next.js",
     iconType: NextIcon,
+  },
+  {
+    title: "Laravel",
+    iconType: LaravelIcon,
   },
   {
     title: "Github",
@@ -78,8 +88,8 @@ const hobbies = [
     top: "10%",
   },
   {
-    title: "",
-    emoji: "",
+    title: "Coding",
+    emoji: "💻",
     left: "50%",
     top: "10%",
   },

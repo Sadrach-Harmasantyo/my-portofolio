@@ -1,6 +1,10 @@
 import React from "react";
 
-export default function TechIcon({ component }: { component: React.ElementType }) {
+export default function TechIcon({
+  component,
+}: {
+  component: React.ElementType;
+}) {
   const Components = component;
   return (
     <>
