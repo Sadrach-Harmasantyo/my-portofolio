@@ -9,7 +9,6 @@ import Header from "@/sections/Header";
 import Hero from "@/sections/Hero";
 import Projects from "@/sections/Projects";
 import Tape from "@/sections/Tape";
-// import Testimonials from "@/sections/Testimonials";
 
 export default function Home() {
   const [trail, setTrail] = useState<{ x: number; y: number; id: number }[]>(
@@ -21,23 +20,18 @@ export default function Home() {
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
-      // Set state untuk mendeteksi pergerakan pertama mouse
       if (!isMouseMoved) {
         setIsMouseMoved(true);
       }
 
-      // Update posisi lingkaran yang selalu mengikuti mouse
       setMousePosition({ x: e.clientX, y: e.clientY });
 
-      // Tambahkan jejak hanya jika sudah melewati jeda waktu tertentu
       const now = Date.now();
       if (now - lastTrailTime > 50) {
-        // Set jeda ke 100ms
         const newTrail = { x: e.clientX, y: e.clientY, id: now };
         setTrail((prev) => [...prev, newTrail]);
         setLastTrailTime(now);
 
-        // Hapus jejak setelah 500ms
         setTimeout(() => {
           setTrail((prev) => prev.filter((t) => t.id !== newTrail.id));
         }, 500);
@@ -53,7 +47,6 @@ export default function Home() {
 
   return (
     <div className="relative">
-      {/* Lingkaran yang mengikuti mouse hanya jika sudah bergerak */}
       {isMouseMoved && (
         <div
           className="fixed pointer-events-none z-50 w-4 h-4 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-full opacity-75"
@@ -65,7 +58,6 @@ export default function Home() {
         />
       )}
 
-      {/* Jejak mouse */}
       {trail.map((t) => (
         <div
           key={t.id}
@@ -82,7 +74,6 @@ export default function Home() {
       <Projects />
       <Tape />
       <Certifications />
-      {/* <Testimonials /> */}
       <About />
       <Contact />
       <Footer />

@@ -16,9 +16,6 @@ export default function Header() {
         <a href="#contact" className="nav-item">
           Contact
         </a>
-        {/* <a href="#contact" className="nav-item bg-white text-gray-900 hover:bg-white/70 hover:text-gray-900">
-          Contact
-        </a> */}
       </nav>
     </div>
   );

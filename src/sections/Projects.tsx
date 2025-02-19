@@ -1,10 +1,6 @@
 import React from "react";
-// import darkSaasLandingPage from "@/assets/images/dark-saas-landing-page.png";
-// import lightSaasLandingPage from "@/assets/images/light-saas-landing-page.png";
-// import aiStartupLandingPage from "@/assets/images/ai-startup-landing-page.png";
 import kbmdsiProfileWebsite from "@/assets/images/kbmdsi-website.png";
 import porosProfileWebsite from "@/assets/images/poros-website.png";
-// import notesWebsite from "@/assets/images/notes-website.png";
 import pokemonWebsite from "@/assets/images/pokemon-website.png";
 import gymWebsite from "@/assets/images/gym-website.png";
 import onlineCourseWebsite from "@/assets/images/online-course-website.png";
@@ -131,43 +127,6 @@ const portfolioProjects = [
     link: "https://github.com/Sadrach-Harmasantyo/laravel-online-course-platform",
     image: onlineCourseWebsite,
   },
-
-  // {
-  //   company: "Individual Project",
-  //   year: "2024",
-  //   title: "Static Notes Website",
-  //   results: [
-  //     { title: "Built using React, Vite, and TypeScript for a modern web development approach." },
-  //     { title: "Implemented features to add, read, delete, and archive notes for efficient note management." },
-  //     { title: 'Developed a static Notes Website as the final project for Dicoding\'s "Belajar Membuat Aplikasi Web dengan React" course.' },
-  //   ],
-  //   link: "https://notes-react-roan.vercel.app/",
-  //   image: notesWebsite,
-  // },
-  // {
-  //   company: "Acme Corp",
-  //   year: "2022",
-  //   title: "Dark Saas Landing Page",
-  //   results: [{ title: "Enhanced user experience by 40%" }, { title: "Improved site speed by 50%" }, { title: "Increased mobile traffic by 35%" }],
-  //   link: "https://youtu.be/4k7IdSLxh6w",
-  //   image: darkSaasLandingPage,
-  // },
-  // {
-  //   company: "Innovative Co",
-  //   year: "2021",
-  //   title: "Light Saas Landing Page",
-  //   results: [{ title: "Boosted sales by 20%" }, { title: "Expanded customer reach by 35%" }, { title: "Increased brand awareness by 15%" }],
-  //   link: "https://youtu.be/7hi5zwO75yc",
-  //   image: lightSaasLandingPage,
-  // },
-  // {
-  //   company: "Quantum Dynamics",
-  //   year: "2023",
-  //   title: "AI Startup Landing Page",
-  //   results: [{ title: "Enhanced user experience by 40%" }, { title: "Improved site speed by 50%" }, { title: "Increased mobile traffic by 35%" }],
-  //   link: "https://youtu.be/Z7I5uSRHMHg",
-  //   image: aiStartupLandingPage,
-  // },
 ];
 
 export default function Projects() {

@@ -14,11 +14,8 @@ import ReactIcon from "@/assets/icons/react.svg";
 import TailwindIcon from "@/assets/icons/tailwind.svg";
 import PhpIcon from "@/assets/icons/php.svg";
 import LaravelIcon from "@/assets/icons/laravel.svg";
-// import ChromeIcon from "@/assets/icons/chrome.svg";
 import NextIcon from "@/assets/icons/nextjs.svg";
-// import mapImage from "@/assets/images/map.png";
 import mapMalangImage from "@/assets/images/map-malang.png";
-// import sadrachMemoji from "@/assets/images/memoji-sadrach2.png";
 import CardHeader from "@/components/CardHeader";
 import ToolBoxItems from "@/components/ToolBoxItems";
 import { motion } from "framer-motion";
@@ -129,48 +126,6 @@ const hobbies = [
     left: "80%",
     top: "20%",
   },
-  // {
-  //   title: "Gaming",
-  //   emoji: "🎮",
-  //   left: "10%",
-  //   top: "35%",
-  // },
-  // {
-  //   title: "Fitness",
-  //   emoji: "🏋️‍♀️",
-  //   left: "70%",
-  //   top: "45%",
-  // },
-  // {
-  //   title: "Hiking",
-  //   emoji: "🏔️",
-  //   left: "5%",
-  //   top: "5%",
-  // },
-  // {
-  //   title: "Photography",
-  //   emoji: "📸",
-  //   left: "50%",
-  //   top: "5%",
-  // },
-  // {
-  //   title: "Music",
-  //   emoji: "🎧",
-  //   left: "35%",
-  //   top: "40%",
-  // },
-  // {
-  //   title: "Painting",
-  //   emoji: "🎨",
-  //   left: "5%",
-  //   top: "65%",
-  // },
-  // {
-  //   title: "Cooking",
-  //   emoji: "🍳",
-  //   left: "45%",
-  //   top: "70%",
-  // },
 ];
 
 export default function About() {
@@ -251,7 +206,6 @@ export default function About() {
                   alt="Map"
                   className="w-full h-full object-cover object-center"
                 />
-                {/* <h1 className="absolute left-1/2 -translate-x-1/2 top-5 text-3xl text-slate-50 text-center font-serif">Malang City</h1> */}
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-20 rounded-full overflow-hidden after:content-[''] after:absolute after:inset-0 after:outline after:outline-2 after:-outline-offset-2 after:rounded-full after:outline-gray-950/30">
                   <div className="absolute inset-0 rounded-full  bg-gradient-to-r from-emerald-300 to-sky-400 -z-20 animate-ping [animation-duration:2s]"></div>
                   <div className="absolute inset-0 rounded-full  bg-gradient-to-r from-emerald-300 to-sky-400 -z-10"></div>
