@@ -7,8 +7,10 @@ import Contact from "@/sections/Contact";
 import Footer from "@/sections/Footer";
 import Header from "@/sections/Header";
 import Hero from "@/sections/Hero";
+import TechStack from "@/sections/TechStack";
 import Projects from "@/sections/Projects";
 import Tape from "@/sections/Tape";
+import WorkExperience from "@/sections/WorkExperience";
 
 export default function Home() {
   const [trail, setTrail] = useState<{ x: number; y: number; id: number }[]>(
@@ -51,9 +53,8 @@ export default function Home() {
         <div
           className="fixed pointer-events-none z-50 w-4 h-4 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-full opacity-75"
           style={{
-            transform: `translate(${mousePosition.x - 8}px, ${
-              mousePosition.y - 8
-            }px)`,
+            transform: `translate(${mousePosition.x - 8}px, ${mousePosition.y - 8
+              }px)`,
           }}
         />
       )}
@@ -71,6 +72,8 @@ export default function Home() {
 
       <Header />
       <Hero />
+      <TechStack />
+      <WorkExperience />
       <Projects />
       <Tape />
       <Certifications />

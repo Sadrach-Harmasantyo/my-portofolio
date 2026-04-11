@@ -1,5 +1,5 @@
 import React from "react";
-import StarIcon from "@/assets/icons/star.svg";
+import StarIcon from "@/assets/icons/ui/star.svg";
 import { twMerge } from "tailwind-merge";
 
 export default function CardHeader({ title, description, className }: { title: string; description: string; className?: string }) {

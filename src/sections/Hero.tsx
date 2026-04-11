@@ -1,11 +1,11 @@
 import Image from "next/image";
 import React from "react";
-import DownloadIcon from "@/assets/icons/download.svg";
-import grainImage from "@/assets/images/grain.jpg";
-import StarIcon from "@/assets/icons/star.svg";
-import SparkleIcon from "@/assets/icons/sparkle.svg";
+import DownloadIcon from "@/assets/icons/ui/download.svg";
+import grainImage from "@/assets/images/shared/grain.jpg";
+import StarIcon from "@/assets/icons/ui/star.svg";
+import SparkleIcon from "@/assets/icons/ui/sparkle.svg";
 import HeroOrbit from "@/components/HeroOrbit";
-import profileImage from "@/assets/images/foto-profile.png";
+import profileImage from "@/assets/images/shared/foto-profile.png";
 
 export default function Hero() {
   return (
@@ -131,8 +131,8 @@ export default function Hero() {
         </div>
         <div className="flex flex-col md:flex-row justify-center items-center mt-8 gap-4">
           <a
-            href="/CV-Sadrach Harmasantyo.pdf"
-            download="CV-Sadrach Harmasantyo.pdf"
+            href="/CV Sadrach Harmasantyo_April 2026.pdf"
+            download="CV Sadrach Harmasantyo_April 2026.pdf"
             className="group relative inline-flex items-center justify-center overflow-hidden border border-white/15 px-6 h-12 rounded-xl bg-gray-900 text-white transition duration-300 ease-out"
           >
             <span className="flex items-center justify-center gap-4">

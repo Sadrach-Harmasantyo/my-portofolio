@@ -2,130 +2,44 @@
 
 import Card from "@/components/Card";
 import SectionHeader from "@/components/SectionHeader";
-import bookImage from "@/assets/images/book-cover.png";
+import bookImage from "@/assets/images/about/book-cover.png";
 import React, { useRef } from "react";
 import Image from "next/image";
-import JavascriptIcon from "@/assets/icons/square-js.svg";
-import TypescriptIcon from "@/assets/icons/typescript-svgrepo-com.svg";
-import GithubIcon from "@/assets/icons/github.svg";
-import Html5Icon from "@/assets/icons/html5.svg";
-import Css3Icon from "@/assets/icons/css3.svg";
-import ReactIcon from "@/assets/icons/react.svg";
-import TailwindIcon from "@/assets/icons/tailwind.svg";
-import PhpIcon from "@/assets/icons/php.svg";
-import LaravelIcon from "@/assets/icons/laravel.svg";
-import NextIcon from "@/assets/icons/nextjs.svg";
-import mapMalangImage from "@/assets/images/map-malang.png";
+import mapMalangImage from "@/assets/images/about/map-malang.png";
 import CardHeader from "@/components/CardHeader";
-import ToolBoxItems from "@/components/ToolBoxItems";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import profileImage from "@/assets/images/foto-profile.png";
-
-const toolboxItems = [
-  {
-    title: "HTML5",
-    iconType: Html5Icon,
-  },
-  {
-    title: "CSS3",
-    iconType: Css3Icon,
-  },
-  {
-    title: "TailwindCSS",
-    iconType: TailwindIcon,
-  },
-  {
-    title: "JavaScript",
-    iconType: JavascriptIcon,
-  },
-  {
-    title: "TypeScript",
-    iconType: TypescriptIcon,
-  },
-  {
-    title: "PHP",
-    iconType: PhpIcon,
-  },
-  {
-    title: "React.js",
-    iconType: ReactIcon,
-  },
-  {
-    title: "Next.js",
-    iconType: NextIcon,
-  },
-  {
-    title: "Laravel",
-    iconType: LaravelIcon,
-  },
-  {
-    title: "Github",
-    iconType: GithubIcon,
-  },
-];
+import profileImage from "@/assets/images/shared/foto-profile.png";
 
 const hobbies = [
+  { title: "Gaming", emoji: "🎮", left: "10%", top: "20%" },
+  { title: "Fitness", emoji: "🏋️‍♀️", left: "70%", top: "30%" },
+  { title: "Culinary", emoji: "🍽️", left: "20%", top: "10%" },
+  { title: "Coding", emoji: "💻", left: "50%", top: "10%" },
+  { title: "Travel", emoji: "✈️", left: "35%", top: "50%" },
+];
+
+const musics = [
   {
-    title: "Gaming",
-    emoji: "🎮",
-    left: "10%",
-    top: "20%",
+    title: "Lofi Hip Hop Radio",
+    artist: "Lofi Girl",
+    url: "https://www.youtube.com/watch?v=jfKfPfyJRdk",
   },
   {
-    title: "Fitness",
-    emoji: "🏋️‍♀️",
-    left: "70%",
-    top: "30%",
+    title: "Coding Mode",
+    artist: "Spotify Playlist",
+    url: "https://open.spotify.com/playlist/37i9dQZF1DX8Uebhn9wzrS",
   },
   {
-    title: "",
-    emoji: "",
-    left: "20%",
-    top: "10%",
+    title: "Deep Focus",
+    artist: "Spotify Playlist",
+    url: "https://open.spotify.com/playlist/37i9dQZF1DWZeKCadgRdKQ",
   },
   {
-    title: "Coding",
-    emoji: "💻",
-    left: "50%",
-    top: "10%",
-  },
-  {
-    title: "",
-    emoji: "",
-    left: "35%",
-    top: "50%",
-  },
-  {
-    title: "",
-    emoji: "",
-    left: "10%",
-    top: "70%",
-  },
-  {
-    title: "",
-    emoji: "",
-    left: "45%",
-    top: "80%",
-  },
-  {
-    title: "",
-    emoji: "",
-    left: "25%",
-    top: "90%",
-  },
-  {
-    title: "",
-    emoji: "",
-    left: "60%",
-    top: "70%",
-  },
-  {
-    title: "",
-    emoji: "",
-    left: "80%",
-    top: "20%",
-  },
+    title: "Chill Vibes",
+    artist: "Lofi Beats",
+    url: "https://open.spotify.com/playlist/37i9dQZF1DWTvNyxOwkztu",
+  }
 ];
 
 export default function About() {
@@ -151,22 +65,32 @@ export default function About() {
                 <Image src={bookImage} alt="Book Cover" />
               </div>
             </Card>
-            <Card className="h-[320px] md:col-span-3 lg:col-span-2">
+            <Card className="h-[320px] md:col-span-3 lg:col-span-2 flex flex-col">
               <CardHeader
-                title="My Toolbox"
-                description="Explore the technologies and tools I use to craft exceptional digital experiences"
-                className=""
+                title="My Playlist"
+                description="The soundtrack that fuels my focus and coding sessions."
+                className="pb-0"
               />
-              <ToolBoxItems
-                items={toolboxItems}
-                className=""
-                itemsWrapperClassName="animate-move-left [animation-duration:30s]"
-              />
-              <ToolBoxItems
-                items={toolboxItems}
-                className="mt-6"
-                itemsWrapperClassName="animate-move-right [animation-duration:20s]"
-              />
+              <div className="px-6 flex-1 pt-2 pb-6 flex flex-col gap-3 overflow-y-auto scrollbar-hide [mask-image:linear-gradient(to_bottom,transparent,black_15%,black_85%,transparent)]">
+                {musics.map((music, index) => (
+                  <Link
+                    href={music.url}
+                    target="_blank"
+                    key={index}
+                    className="flex items-center justify-between p-3 md:p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors group"
+                  >
+                    <div className="flex flex-col">
+                      <span className="font-semibold text-white/80 group-hover:text-white transition-colors">{music.title}</span>
+                      <span className="text-sm text-white/50">{music.artist}</span>
+                    </div>
+                    <div className="size-8 flex-shrink-0 rounded-full bg-emerald-400/10 flex items-center justify-center text-emerald-300 group-hover:bg-emerald-400/20 group-hover:-translate-y-1 transition-all duration-300">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" className="size-4 text-emerald-300">
+                        <path d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3" />
+                      </svg>
+                    </div>
+                  </Link>
+                ))}
+              </div>
             </Card>
           </div>
 

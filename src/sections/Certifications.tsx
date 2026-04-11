@@ -2,10 +2,10 @@ import Card from "@/components/Card";
 import SectionHeader from "@/components/SectionHeader";
 import Image from "next/image";
 import React, { Fragment } from "react";
-import LearnReactCertificate from "@/assets/images/sertifikat_course_belajar membuat aplikasi web dengan react-1.png";
-import LearnBasicJavascript from "@/assets/images/sertifikat_course_belajar dasar pemrograman javascript-1.png";
-import LearnBasicFrontend from "@/assets/images/sertifikat_course_belajar membuat frontend web untuk pemula-1.png";
-import LearnBasicWeb from "@/assets/images/sertifikat_course_belajar dasar pemrograman web-1.png";
+import LearnReactCertificate from "@/assets/images/certificates/sertifikat_course_belajar membuat aplikasi web dengan react-1.png";
+import LearnBasicJavascript from "@/assets/images/certificates/sertifikat_course_belajar dasar pemrograman javascript-1.png";
+import LearnBasicFrontend from "@/assets/images/certificates/sertifikat_course_belajar membuat frontend web untuk pemula-1.png";
+import LearnBasicWeb from "@/assets/images/certificates/sertifikat_course_belajar dasar pemrograman web-1.png";
 import Link from "next/link";
 
 const certifications = [

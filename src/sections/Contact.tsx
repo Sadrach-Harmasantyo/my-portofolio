@@ -1,8 +1,8 @@
 "use client";
 
 import React from "react";
-import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
-import grainImage from "@/assets/images/grain.jpg";
+import ArrowUpRightIcon from "@/assets/icons/ui/arrow-up-right.svg";
+import grainImage from "@/assets/images/shared/grain.jpg";
 
 export default function Contact() {
   const emailAddress = "harmasantyosadrach@gmail.com";

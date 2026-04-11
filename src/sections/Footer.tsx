@@ -1,5 +1,5 @@
 import React from "react";
-import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
+import ArrowUpRightIcon from "@/assets/icons/ui/arrow-up-right.svg";
 
 const footerLinks = [
   {
