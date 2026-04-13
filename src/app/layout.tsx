@@ -18,8 +18,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="overflow-x-hidden relative" style={{ scrollBehavior: "smooth" }}>
-      <body className={twMerge(inter.variable, calistoga.variable, "bg-gray-900 text-white antialiased font-sans overflow-x-hidden")}>
+    <html lang="en" className="overflow-x-clip relative" style={{ scrollBehavior: "smooth" }}>
+      <body className={twMerge(inter.variable, calistoga.variable, "bg-gray-900 text-white antialiased font-sans overflow-x-clip")}>
         {children}
         <Analytics />
       </body>
