@@ -13,6 +13,8 @@ import LaravelIcon from "@/assets/icons/tech/laravel.svg";
 import NextIcon from "@/assets/icons/tech/nextjs.svg";
 import VueIcon from "@/assets/icons/tech/vue.svg";
 import NuxtIcon from "@/assets/icons/tech/nuxtjs.svg";
+import MySQLIcon from "@/assets/icons/tech/mysql.svg";
+import PostgreSQLIcon from "@/assets/icons/tech/postgresql.svg";
 import GitIcon from "@/assets/icons/tech/git.svg";
 import ShadcnIcon from "@/assets/icons/tech/shadcn.svg";
 import AntDesignIcon from "@/assets/icons/tech/antdesign.svg";
@@ -30,6 +32,8 @@ const techStackItems = [
   { title: "Vue.js", iconType: VueIcon },
   { title: "Nuxt.js", iconType: NuxtIcon },
   { title: "Laravel", iconType: LaravelIcon },
+  { title: "MySQL", iconType: MySQLIcon},
+  { title: "PostgreSQL", iconType: PostgreSQLIcon},
   { title: "Shadcn UI", iconType: ShadcnIcon },
   { title: "Ant Design", iconType: AntDesignIcon },
   { title: "Git", iconType: GitIcon },
