@@ -9,21 +9,13 @@ import { portfolioProjects } from "@/data/projects";
 
 export default function Projects() {
   return (
-    <section id="projects" className="pb-16 lg:py-24">
+    <section id="projects" className="py-16 lg:py-24">
       <div className="container">
-        <SectionHeader
-          eyebrow="Real-World Results"
-          title="Featured Projects"
-          description="These are some of the projects I have worked on."
-        />
+        <SectionHeader eyebrow="Real-World Results" title="Featured Projects" description="These are some of the projects I have worked on." />
 
         <div className="flex flex-col mt-10 md:mt-20 gap-20">
           {portfolioProjects.slice(0, 5).map((project, index) => (
-            <Card
-              key={index}
-              className="px-6 pt-6 pb-0 md:px-8 md:pt-8 lg:pt-10 lg:px-12 sticky"
-              style={{ top: `calc(64px + ${index * 30}px)` }}
-            >
+            <Card key={index} className="px-6 pt-6 pb-0 md:px-8 md:pt-8 lg:pt-10 lg:px-12 sticky" style={{ top: `calc(64px + ${index * 30}px)` }}>
               <div className="lg:grid lg:grid-cols-2 lg:gap-12">
                 <div className="lg:pb-10">
                   <div className="bg-gradient-to-r from-emerald-300 to-sky-400 inline-flex gap-2 font-bold uppercase tracking-widest text-xs text-transparent bg-clip-text">
@@ -31,16 +23,11 @@ export default function Projects() {
                     <span>&bull;</span>
                     <span>{project.year}</span>
                   </div>
-                  <h3 className="font-serif text-xl md:text-3xl mt-2">
-                    {project.title}
-                  </h3>
+                  <h3 className="font-serif text-xl md:text-3xl mt-2">{project.title}</h3>
                   <hr className="border-t-2 border-white/5 mt-3 mb-3 md:mt-4 md:mb-4" />
                   <ul className="flex flex-col gap-2">
                     {project.results.map((result, index) => (
-                      <li
-                        key={index}
-                        className="flex gap-2 text-xs md:text-sm text-white/50 leading-relaxed"
-                      >
+                      <li key={index} className="flex gap-2 text-xs md:text-sm text-white/50 leading-relaxed">
                         <CheckCircleIcon className="size-4 md:size-5 flex-shrink-0 mt-0.5" />
                         <span>{result.title}</span>
                       </li>
@@ -54,16 +41,8 @@ export default function Projects() {
                   </a>
                 </div>
                 <div className="relative">
-                  <Link
-                    href={project.link}
-                    target="_blank"
-                    className="absolute top-0 left-0 w-full h-full"
-                  >
-                    <Image
-                      src={project.image}
-                      alt={project.title}
-                      className="mt-8 -mb-4 md:-mb-0 lg:mt-0 lg:absolute lg:h-full lg:w-auto lg:max-w-none rounded-t-xl"
-                    />
+                  <Link href={project.link} target="_blank" className="absolute top-0 left-0 w-full h-full">
+                    <Image src={project.image} alt={project.title} className="mt-8 -mb-4 md:-mb-0 lg:mt-0 lg:absolute lg:h-full lg:w-auto lg:max-w-none rounded-t-xl" />
                   </Link>
                 </div>
               </div>

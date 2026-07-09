@@ -5,7 +5,7 @@ import SectionHeader from "@/components/SectionHeader";
 import bookImage from "@/assets/images/about/book-cover.png";
 import React, { useRef } from "react";
 import Image from "next/image";
-import mapMalangImage from "@/assets/images/about/map-malang.png";
+import mapJakartaImage from "@/assets/images/about/map-jakarta.png";
 import CardHeader from "@/components/CardHeader";
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -39,46 +39,30 @@ const musics = [
     title: "Chill Vibes",
     artist: "Lofi Beats",
     url: "https://open.spotify.com/playlist/37i9dQZF1DWTvNyxOwkztu",
-  }
+  },
 ];
 
 export default function About() {
   const constraintRef = useRef(null);
 
   return (
-    <section id="about" className="py-20 lg:py-28">
+    <section id="about" className="py-16 lg:py-24">
       <div className="container">
-        <SectionHeader
-          eyebrow="About Me"
-          title="A Glimpse Into My World"
-          description="Learn more about who I am, what I do, and what inspires me"
-        />
+        <SectionHeader eyebrow="About Me" title="A Glimpse Into My World" description="Learn more about who I am, what I do, and what inspires me" />
 
         <div className="mt-20 flex flex-col gap-8">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-5 lg:grid-cols-3">
             <Card className="h-[320px] md:col-span-2 lg:col-span-1">
-              <CardHeader
-                title="My Reads"
-                description="Explore the books shaping my perspective"
-              />
+              <CardHeader title="My Reads" description="Explore the books shaping my perspective" />
               <div className="w-40 mx-auto mt-2 md:mt-0">
                 <Image src={bookImage} alt="Book Cover" />
               </div>
             </Card>
             <Card className="h-[320px] md:col-span-3 lg:col-span-2 flex flex-col">
-              <CardHeader
-                title="My Playlist"
-                description="The soundtrack that fuels my focus and coding sessions."
-                className="pb-0"
-              />
+              <CardHeader title="My Playlist" description="The soundtrack that fuels my focus and coding sessions." className="pb-0" />
               <div className="px-6 flex-1 pt-2 pb-6 flex flex-col gap-3 overflow-y-auto scrollbar-hide [mask-image:linear-gradient(to_bottom,transparent,black_15%,black_85%,transparent)]">
                 {musics.map((music, index) => (
-                  <Link
-                    href={music.url}
-                    target="_blank"
-                    key={index}
-                    className="flex items-center justify-between p-3 md:p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors group"
-                  >
+                  <Link href={music.url} target="_blank" key={index} className="flex items-center justify-between p-3 md:p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors group">
                     <div className="flex flex-col">
                       <span className="font-semibold text-white/80 group-hover:text-white transition-colors">{music.title}</span>
                       <span className="text-sm text-white/50">{music.artist}</span>
@@ -96,11 +80,7 @@ export default function About() {
 
           <div className="grid grid-cols-1 gap-8 md:grid-cols-5 lg:grid-cols-3">
             <Card className="h-[320px] p-0 flex flex-col md:col-span-3 lg:col-span-2">
-              <CardHeader
-                title="Beyond The Code"
-                description="Explore my interests and hobbies beyond the digital world"
-                className="px-6 py-6"
-              />
+              <CardHeader title="Beyond The Code" description="Explore my interests and hobbies beyond the digital world" className="px-6 py-6" />
               <div className="relative flex-1" ref={constraintRef}>
                 {hobbies.map((item, index) => (
                   <motion.div
@@ -110,9 +90,7 @@ export default function About() {
                     drag
                     dragConstraints={constraintRef}
                   >
-                    <span className="font-medium text-gray-950">
-                      {item.title}
-                    </span>
+                    <span className="font-medium text-gray-950">{item.title}</span>
                     <span>{item.emoji}</span>
                   </motion.div>
                 ))}
@@ -120,24 +98,12 @@ export default function About() {
             </Card>
 
             <Card className="h-[320px] p-0 relative md:col-span-2 lg:col-span-1">
-              <Link
-                href={"https://maps.app.goo.gl/3k5bwPwpPpsgz6Zu6"}
-                target="_blank"
-                className="absolute w-full h-full"
-              >
-                <Image
-                  src={mapMalangImage}
-                  alt="Map"
-                  className="w-full h-full object-cover object-center"
-                />
+              <Link href={"https://maps.app.goo.gl/3k5bwPwpPpsgz6Zu6"} target="_blank" className="absolute w-full h-full">
+                <Image src={mapJakartaImage} alt="Map" className="w-full h-full object-cover object-center" />
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-20 rounded-full overflow-hidden after:content-[''] after:absolute after:inset-0 after:outline after:outline-2 after:-outline-offset-2 after:rounded-full after:outline-gray-950/30">
                   <div className="absolute inset-0 rounded-full  bg-gradient-to-r from-emerald-300 to-sky-400 -z-20 animate-ping [animation-duration:2s]"></div>
                   <div className="absolute inset-0 rounded-full  bg-gradient-to-r from-emerald-300 to-sky-400 -z-10"></div>
-                  <Image
-                    src={profileImage}
-                    alt="Smile Memoji"
-                    className="size-20 filter grayscale scale-[2.1] translate-y-4"
-                  />
+                  <Image src={profileImage} alt="Smile Memoji" className="size-20 filter grayscale scale-[2.1] translate-y-4" />
                 </div>
               </Link>
             </Card>

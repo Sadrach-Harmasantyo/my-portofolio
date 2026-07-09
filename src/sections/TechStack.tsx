@@ -19,6 +19,8 @@ import GitIcon from "@/assets/icons/tech/git.svg";
 import ShadcnIcon from "@/assets/icons/tech/shadcn.svg";
 import AntDesignIcon from "@/assets/icons/tech/antdesign.svg";
 import TechStackMarquee from "@/components/TechStackMarquee";
+import FastApiIcon from "@/assets/icons/tech/fastapi.svg";
+import PythonIcon from "@/assets/icons/tech/python.svg";
 
 const techStackItems = [
   { title: "HTML5", iconType: Html5Icon },
@@ -26,14 +28,16 @@ const techStackItems = [
   { title: "TailwindCSS", iconType: TailwindIcon },
   { title: "JavaScript", iconType: JavascriptIcon },
   { title: "TypeScript", iconType: TypescriptIcon },
+  { title: "Python", iconType: PythonIcon },
   { title: "PHP", iconType: PhpIcon },
   { title: "React.js", iconType: ReactIcon },
   { title: "Next.js", iconType: NextIcon },
   { title: "Vue.js", iconType: VueIcon },
   { title: "Nuxt.js", iconType: NuxtIcon },
+  { title: "FastAPI", iconType: FastApiIcon },
   { title: "Laravel", iconType: LaravelIcon },
-  { title: "MySQL", iconType: MySQLIcon},
-  { title: "PostgreSQL", iconType: PostgreSQLIcon},
+  { title: "MySQL", iconType: MySQLIcon },
+  { title: "PostgreSQL", iconType: PostgreSQLIcon },
   { title: "Shadcn UI", iconType: ShadcnIcon },
   { title: "Ant Design", iconType: AntDesignIcon },
   { title: "Git", iconType: GitIcon },
@@ -42,17 +46,10 @@ const techStackItems = [
 
 export default function TechStack() {
   return (
-    <section className="pt-0 pb-24 lg:pt-10 overflow-x-clip">
+    <section className="pt-0 pb-16 lg:pb-24 lg:pt-10 overflow-x-clip">
       <div className="flex flex-col gap-6 md:px-10 lg:px-20">
-        <TechStackMarquee
-          items={techStackItems}
-          className=""
-        />
-        <TechStackMarquee
-          items={techStackItems}
-          className=""
-          reverse
-        />
+        <TechStackMarquee items={techStackItems} className="" />
+        <TechStackMarquee items={techStackItems} className="" reverse />
       </div>
     </section>
   );
