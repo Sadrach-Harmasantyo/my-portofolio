@@ -7,7 +7,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import type { MotionValue } from "framer-motion";
 
 const educationHighlights = [
-  "Maintained a GPA of 3.80/4.00 over eight semesters, with coursework focused on computer science, information systems, and business concepts.",
+  "Maintained a GPA of 3.94/4.00 over eight semesters, with coursework focused on computer science, information systems, and business concepts.",
   "Worked as a Student Employee Web Developer at the Information Systems Laboratory, Faculty of Computer Science, contributing to web-based system development.",
   "Served as a Practicum Teaching Assistant for the Database Administration course, supporting students in database tools, security, backup and recovery, concurrency, and high availability concepts.",
   "Actively participated in student organizations, including KBMDSI as a Frontend Web Developer, POROS as a Frontend Web and Internal Division member, and RAION as an Apps and Internal Programmer.",
