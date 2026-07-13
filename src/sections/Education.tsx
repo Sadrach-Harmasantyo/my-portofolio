@@ -87,7 +87,7 @@ export default function Education() {
                 System
               </h3>
               <p className="font-semibold text-white text-lg mt-6">Brawijaya University</p>
-              <p className="text-white/55 text-base mt-2">GPA: 3.80 / 4.00</p>
+              <p className="text-white/55 text-base mt-2">GPA: 3.94 / 4.00</p>
             </div>
 
             <div className="">
